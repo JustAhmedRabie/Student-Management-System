@@ -18,10 +18,10 @@ public class CrudOperations {
         database.saveToFile();
     }
 
-//    ArrayList<Record>[] returnAllStudents() {
-//        database.readFromFile();
-//        return database.returnAllRecords();
-//    }
+    ArrayList<Record> returnAllStudents() {
+        database.readFromFile();
+        return database.returnAllRecords();
+    }
 
     void deleteStudent(Student student) {
         if(student == null)
