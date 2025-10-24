@@ -1,5 +1,0 @@
-S001,Ali Hassan,20,Male,Computer Engineering,3.5
-S002,Sara Ahmed,21,Female,Electrical Engineering,3.8
-S003,Omar Nasser,19,Male,Mechanical Engineering,3.2
-S004,Lina Tarek,22,Female,Civil Engineering,3.9
-S005,Khaled Mostafa,20,Male,Communication Engineering,2.7
