@@ -36,19 +36,29 @@ public abstract class Database {
     }
 
 
-    public boolean contains(String key ){
+    public boolean containsId(String key ){
         int n = records.size();
         for(int i = 0;i<n;i++){
-            if(records.get(i).getSearchKey().equals(key))
+            if(records.get(i).getStudentId().equals(key))
                 return true;
         }
         return false;
     }
 
+    public boolean containsName(String key ){
+        int n = records.size();
+        for(int i = 0;i<n;i++){
+            if(records.get(i).getFullName().equals(key))
+                return true;
+        }
+        return false;
+    }
+
+
     public Record getRecord(String key){
         int n = records.size();
         for(int i = 0;i<n;i++){
-            if(records.get(i).getSearchKey().equals(key))
+            if(records.get(i).getFullName().equals(key) || records.get(i).getStudentId().equals(key))
                 return records.get(i);
         }
         return null;
@@ -61,7 +71,7 @@ public abstract class Database {
     public void deleteRecord(String key){
         int n = records.size();
         for (int i = 0; i < n; i++) {
-            if (records.get(i).getSearchKey().equals(key)) {
+            if (records.get(i).getStudentId().equals(key)) {
                 records.remove(i);
                 break;
             }
