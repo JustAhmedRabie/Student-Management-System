@@ -15,7 +15,12 @@ public class StudentManagementSystem {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("hello world");
+
+//        CrudOperations crudOperations = new CrudOperations("Students.txt");
+//        Student s1 = crudOperations.searchStudent("S002");
+//        System.out.println(s1);
+
+
 
         new LoginForm();
     }
