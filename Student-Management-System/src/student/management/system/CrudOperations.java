@@ -24,9 +24,8 @@ public class CrudOperations {
     }
 
     void deleteStudent(Student student) {
-        if(student == null)
-            return;
         database.readFromFile();
+        if(!database.containsId(student.getStudentId())) {return;}
         database.deleteRecord(student.getStudentId());
         database.saveToFile();
     }
@@ -35,4 +34,24 @@ public class CrudOperations {
         database.readFromFile();
         return (Student) database.getRecord(studentId);
     }
+
+    void updateStudent(String studentId, Student updatedStudent) {
+
+        database.readFromFile();
+        Record record = database.getRecord(studentId);
+        if (record == null) {return;}
+
+
+        Student s = (Student) record;
+
+        s.setFullName(updatedStudent.getFullName());
+        s.setAge(updatedStudent.getAge());
+        s.setGender(updatedStudent.getGender());
+        s.setDepartment(updatedStudent.getDepartment());
+        s.setGpa(updatedStudent.getGpa());
+
+        database.saveToFile();
+
+    }
 }
+
