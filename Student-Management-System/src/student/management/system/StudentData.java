@@ -37,7 +37,7 @@ public class StudentData extends JFrame {
         table1.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
         table1.setFillsViewportHeight(true);
 
-        for (Record x :studentDatabase.getRecords()){
+        for (Record x :studentDatabase.returnAllRecords()){
         String y=x.lineRepresentation();
         String[] data = y.split(",");
         model.addRow(data);
