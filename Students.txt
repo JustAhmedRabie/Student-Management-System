@@ -3,3 +3,18 @@ S002,Sara Ahmed,21,Female,Electrical Engineering,3.8
 S003,Omar Nasser,19,Male,Mechanical Engineering,3.2
 S004,Lina Tarek,22,Female,Civil Engineering,3.9
 S005,Khaled Mostafa,20,Male,Communication Engineering,2.7
+S006,Hana Adel,21,Female,Computer Engineering,3.6
+S007,Mostafa Zaki,23,Male,Industrial Engineering,2.9
+S008,Reem Khalil,20,Female,Architecture,3.4
+S009,Tarek Hussein,22,Male,Mechatronics,3.1
+S010,Nour Hany,19,Female,Biomedical Engineering,3.7
+S011,Ahmed Fathy,21,Male,Software Engineering,3.2
+S012,Mariam Youssef,22,Female,Chemical Engineering,3.5
+S013,Omar Ashraf,20,Male,Petroleum Engineering,3.0
+S014,Laila Samir,21,Female,Computer Engineering,3.9
+S015,Karim Hossam,23,Male,Mechanical Engineering,2.8
+S016,Rana Mohamed,19,Female,Electrical Engineering,3.6
+S017,Adham Ezzat,22,Male,Computer Engineering,3.4
+S018,Dina Magdy,20,Female,Civil Engineering,3.7
+S019,Youssef Hassan,21,Male,Communication Engineering,3.1
+S020,Salma Khaled,22,Female,Architecture,3.8

@@ -22,7 +22,8 @@ public class HomeForm extends JFrame{
         VIEWButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                dispose();
+                new StudentData();
             }
         });
     }

@@ -98,8 +98,9 @@ public abstract class Database {
 
     }
 
-
-
+    public ArrayList<Record> getRecords() {
+        return records;
+    }
 }
 
 
