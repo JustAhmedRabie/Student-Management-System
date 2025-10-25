@@ -20,9 +20,9 @@ public class UpdateStudent extends JFrame {
 
     UpdateStudent(Student student){
 
-        setTitle("Students Table");
+        setTitle("Students Editor");
         setContentPane(mainPanel);
-        setSize(600, 200);
+        setSize(600, 300);
         setLocationRelativeTo(null);
         setVisible(true);
 
