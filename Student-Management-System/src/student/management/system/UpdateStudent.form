@@ -126,7 +126,7 @@
           <requestFocusEnabled value="true"/>
         </properties>
       </component>
-      <component id="66a0d" class="javax.swing.JCheckBox" binding="maleCheckBox" default-binding="true">
+      <component id="66a0d" class="javax.swing.JRadioButton" binding="maleCheckBox" default-binding="true">
         <constraints>
           <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -137,7 +137,7 @@
           <text value="Male"/>
         </properties>
       </component>
-      <component id="c5799" class="javax.swing.JCheckBox" binding="femaleCheckBox" default-binding="true">
+      <component id="c5799" class="javax.swing.JRadioButton" binding="femaleCheckBox" default-binding="false">
         <constraints>
           <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>

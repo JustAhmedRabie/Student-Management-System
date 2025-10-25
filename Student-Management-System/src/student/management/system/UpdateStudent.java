@@ -11,8 +11,8 @@ public class UpdateStudent extends JFrame {
     private JTextField name;
     private JTextField age;
     private JTextField dep;
-    private JCheckBox maleCheckBox;
-    private JCheckBox femaleCheckBox;
+    private JRadioButton maleCheckBox;
+    private JRadioButton femaleCheckBox;
     private JButton deleteButton;
     private JButton updateButton;
 
