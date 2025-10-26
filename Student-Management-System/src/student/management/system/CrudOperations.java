@@ -10,12 +10,13 @@ public class CrudOperations {
         this.database = new StudentDatabase(fileName);
     }
 
-    void addStudent(Student student) { //Make sure to validate student attributes before calling this function
+    boolean addStudent(Student student) { //Make sure to validate student attributes before calling this function
 
         database.readFromFile();
-        if(database.containsId(student.getStudentId())){return; /* if ID already exists */}
+        if(database.containsId(student.getStudentId())){return false; /* if ID already exists */}
         database.insertRecord(student);
         database.saveToFile();
+        return  true;
     }
 
     ArrayList<Record> returnAllStudents() {
