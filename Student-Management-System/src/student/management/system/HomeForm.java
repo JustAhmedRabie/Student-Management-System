@@ -29,6 +29,7 @@ public class HomeForm extends JFrame{
         ADDButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
                 new AddStudent();
             }
         });
