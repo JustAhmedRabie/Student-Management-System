@@ -18,3 +18,4 @@ S017,Adham Ezzat,22,Male,Computer Engineering,3.4
 S018,Dina Magdy,20,Female,Civil Engineering,3.7
 S019,Youssef Hassan,21,Male,Communication Engineering,3.1
 S020,Salma Khaled,22,Female,Architecture,3.8
+9345,Seif,20,Male,CCE,3.0
