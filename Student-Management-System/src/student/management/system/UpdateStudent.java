@@ -20,6 +20,10 @@ public class UpdateStudent extends JFrame {
 
     UpdateStudent(Student student){
 
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(maleCheckBox);
+        genderGroup.add(femaleCheckBox);
+
         setTitle("Students Editor");
         setContentPane(mainPanel);
         setSize(600, 300);
@@ -51,13 +55,20 @@ public class UpdateStudent extends JFrame {
                 }
                 Student sNew =new Student(id.getText(), name.getText(), Integer.parseInt(age.getText()),g,dep.getText(),Double.parseDouble(gpa.getText()));
                 x.updateStudent(id.getText(),sNew);
-
+                JOptionPane.showMessageDialog(null, "Student updated successfully!");
+                dispose();
             }
         });
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 x.deleteStudent(student);
+                int confirm = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this student?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
+                if (confirm == JOptionPane.YES_OPTION) {
+                    x.deleteStudent(student);
+                    JOptionPane.showMessageDialog(null, "Student deleted successfully!");
+                    dispose();
+                }
             }
         });
     }
