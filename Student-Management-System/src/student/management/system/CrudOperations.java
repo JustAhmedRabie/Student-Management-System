@@ -22,10 +22,17 @@ public class CrudOperations {
     ArrayList<Record> returnAllStudents() {
         database.readFromFile();
         ArrayList<Record> students = database.returnAllRecords();
+        sortStudents(students);
+
+        return students;
+    }
+
+    private void sortStudents(ArrayList<Record> students)
+    {
         boolean swapped;
+        //Bubble sort
         for (int i = 0; i < students.size() - 1; i++) {
             swapped = false;
-
             for (int j = 0; j < students.size() - 1 - i; j++) {
                 if (Integer.parseInt(students.get(j).getStudentId()) > Integer.parseInt(students.get(j+1).getStudentId())) {
                     // Swap elements
@@ -37,8 +44,6 @@ public class CrudOperations {
             }
             if (!swapped) break;
         }
-
-        return students;
     }
 
     void deleteStudent(Student student) {
