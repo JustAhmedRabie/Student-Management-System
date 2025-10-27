@@ -15,6 +15,7 @@ public class AddStudent extends JFrame {
     private JButton addButton;
     private JButton homeButton;
     private JPanel mainPanel;
+    private JComboBox departmentComboBox;
 
     private CrudOperations x = new CrudOperations("Students.txt");
 
@@ -28,13 +29,34 @@ public class AddStudent extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       String[] departments = {
+               "Not Selected",
+               "Computer Engineering",
+               "Electrical Engineering",
+               "Mechanical Engineering",
+               "Civil Engineering",
+               "Industrial Engineering",
+               "Architecture",
+               "Mechatronics",
+               "Biomedical Engineering",
+               "Software Engineering",
+               "Chemical Engineering",
+               "Petroleum Engineering",
+       };
 
-        addButton.addActionListener(new ActionListener() {
+       for (String dep : departments) {
+           departmentComboBox.addItem(dep);
+       }
+
+
+       addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                String dep=(String) departmentComboBox.getSelectedItem();
+
                 if (id.getText().isEmpty() || name.getText().isEmpty() ||
-                        age.getText().isEmpty() || department.getText().isEmpty() ||
+                        age.getText().isEmpty() || dep.equals("Not Selected") ||
                         gpa.getText().isEmpty() || (!maleCheckBox.isSelected() && !femaleCheckBox.isSelected())) {
 
                     JOptionPane.showMessageDialog(null, "Please fill all fields and select a gender.");
@@ -84,7 +106,7 @@ public class AddStudent extends JFrame {
                 } else {
                     g = "Female";
                 }
-                Student sNew = new Student(id.getText().trim(), name.getText().trim(), tempAge, g, department.getText().trim(),tempGpa);
+                Student sNew = new Student(id.getText().trim(), name.getText().trim(), tempAge, g, dep,tempGpa);
                 x.addStudent(sNew);
                 JOptionPane.showMessageDialog(null, "Student added successfully!");
                 dispose();
@@ -101,16 +123,16 @@ public class AddStudent extends JFrame {
         });
     }
 
-    private void createUIComponents() {
-
-        id = new JTextField();
-        name = new JTextField();
-        gpa = new JTextField();
-        department = new JTextField();
-        age = new JTextField();
-        maleCheckBox = new JRadioButton("Male");
-        femaleCheckBox = new JRadioButton("Female");
-    }
+//    private void createUIComponents() {
+//
+//        id = new JTextField();
+//        name = new JTextField();
+//        gpa = new JTextField();
+//        department = new JTextField();
+//        age = new JTextField();
+//        maleCheckBox = new JRadioButton("Male");
+//        femaleCheckBox = new JRadioButton("Female");
+//    }
 
 
 }

@@ -10,11 +10,11 @@ public class UpdateStudent extends JFrame {
     private JTextField gpa;
     private JTextField name;
     private JTextField age;
-    private JTextField dep;
     private JRadioButton maleCheckBox;
     private JRadioButton femaleCheckBox;
     private JButton deleteButton;
     private JButton updateButton;
+    private JComboBox departmentComboBox;
 
     CrudOperations x = new CrudOperations("Students.txt");
 
@@ -34,7 +34,28 @@ public class UpdateStudent extends JFrame {
         id.setText(student.getStudentId());
         gpa.setText(String.valueOf(student.getGpa()));
         age.setText(String.valueOf(student.getAge()));
-        dep.setText(student.getDepartment());
+
+        String[] departments = {
+                "Not Selected",
+                "Computer Engineering",
+                "Electrical Engineering",
+                "Mechanical Engineering",
+                "Civil Engineering",
+                "Industrial Engineering",
+                "Architecture",
+                "Mechatronics",
+                "Biomedical Engineering",
+                "Software Engineering",
+                "Chemical Engineering",
+                "Petroleum Engineering",
+        };
+
+        for (String dep : departments) {
+            departmentComboBox.addItem(dep);
+        }
+
+        departmentComboBox.setSelectedItem(student.getDepartment());
+
         if (student.getGender().equalsIgnoreCase("Male")) {
             maleCheckBox.setSelected(true);
             femaleCheckBox.setSelected(false);
@@ -53,8 +74,9 @@ public class UpdateStudent extends JFrame {
                 } else {
                      g ="Female";
                 }
+                String dep=(String) departmentComboBox.getSelectedItem();
                 if ( name.getText().isEmpty() ||
-                        age.getText().isEmpty() || dep.getText().isEmpty() ||
+                        age.getText().isEmpty() || dep.equals("Not Selected") ||
                         gpa.getText().isEmpty() ) {
 
                     JOptionPane.showMessageDialog(null, "Please fill all the fields .");
@@ -87,7 +109,7 @@ public class UpdateStudent extends JFrame {
                     JOptionPane.showMessageDialog(null, "Please enter a valid name.");
                     return;
                 }
-                Student sNew =new Student(id.getText(), name.getText(), Integer.parseInt(age.getText()),g,dep.getText(),Double.parseDouble(gpa.getText()));
+                Student sNew =new Student(id.getText(), name.getText(), Integer.parseInt(age.getText()),g,dep,Double.parseDouble(gpa.getText()));
                 x.updateStudent(id.getText(),sNew);
                 JOptionPane.showMessageDialog(null, "Student updated successfully!");
                 dispose();
