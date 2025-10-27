@@ -53,6 +53,40 @@ public class UpdateStudent extends JFrame {
                 } else {
                      g ="Female";
                 }
+                if ( name.getText().isEmpty() ||
+                        age.getText().isEmpty() || dep.getText().isEmpty() ||
+                        gpa.getText().isEmpty() ) {
+
+                    JOptionPane.showMessageDialog(null, "Please fill all the fields .");
+                    return;
+                }
+
+                int tempAge;
+                double tempGpa;
+                try{
+                    tempAge = Integer.parseInt(age.getText());
+                    tempGpa = Double.parseDouble(gpa.getText());
+                }
+                catch (NumberFormatException ex){
+                    JOptionPane.showMessageDialog(null, "Please enter age / gpa as  a numeric value.");
+                    return;
+                }
+
+                if(tempGpa < 0 || tempGpa > 4) {
+                    JOptionPane.showMessageDialog(null, "Please enter a GPA value between 0 and 4.");
+                    return;
+                }
+                if(tempAge < 16 || tempAge > 100){ //16 as least age for a college student
+                    JOptionPane.showMessageDialog(null, "Please enter age value between 16 and 100.");
+                    return;
+                }
+
+
+
+                if(!Validation.isValidName(name.getText())){
+                    JOptionPane.showMessageDialog(null, "Please enter a valid name.");
+                    return;
+                }
                 Student sNew =new Student(id.getText(), name.getText(), Integer.parseInt(age.getText()),g,dep.getText(),Double.parseDouble(gpa.getText()));
                 x.updateStudent(id.getText(),sNew);
                 JOptionPane.showMessageDialog(null, "Student updated successfully!");
