@@ -19,7 +19,5 @@ S018,Dina Magdy,20,Female,Civil Engineering,3.7
 S019,Youssef Hassan,21,Male,Communication Engineering,3.1
 S020,Salma Khaled,22,Female,Architecture,3.8
 9345,Seif,20,Male,CCE,3.0
-21312,bigo,12,Male,asdasd,3.9
-9409,asdsad,16,Male,asdasd,3.9
-940,asdasd,17,Male,asdasd,2.0
-94099,bigo ragab,16,Male,sadsd,3.0
+9409,BigoRagab,21,Male,Test,3.2
+94095,bigo ragab,17,Male,asdas,3.2

@@ -6,8 +6,7 @@ import java.awt.event.ActionListener;
 
 public class HomeForm extends JFrame{
     private JPanel mainPanel;
-    private JButton DELETEButton;
-    private JButton UPDATEButton;
+    private JButton SEARCHButton;
     private JButton VIEWButton;
     private JButton ADDButton;
 
@@ -31,6 +30,15 @@ public class HomeForm extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new AddStudent();
+            }
+        });
+        SEARCHButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 dispose();
+                 new SearchStudentForm();
+
+
             }
         });
     }

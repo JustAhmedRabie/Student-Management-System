@@ -16,7 +16,7 @@ public class AddStudent extends JFrame {
     private JButton homeButton;
     private JPanel mainPanel;
 
-    CrudOperations x = new CrudOperations("Students.txt");
+    private CrudOperations x = new CrudOperations("Students.txt");
 
    AddStudent() {
         ButtonGroup genderGroup = new ButtonGroup();
@@ -27,6 +27,7 @@ public class AddStudent extends JFrame {
         setSize(600, 300);
         setLocationRelativeTo(null);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         addButton.addActionListener(new ActionListener() {
             @Override
@@ -87,6 +88,8 @@ public class AddStudent extends JFrame {
                 x.addStudent(sNew);
                 JOptionPane.showMessageDialog(null, "Student added successfully!");
                 dispose();
+                new HomeForm();
+
             }
         });
         homeButton.addActionListener(new ActionListener() {
@@ -99,7 +102,7 @@ public class AddStudent extends JFrame {
     }
 
     private void createUIComponents() {
-        // Example of manual initialization
+
         id = new JTextField();
         name = new JTextField();
         gpa = new JTextField();
