@@ -15,7 +15,7 @@ public class SearchStudentForm extends javax.swing.JFrame {
 
     public SearchStudentForm() {
         setVisible(true);
-        setSize(200,200);
+        setSize(400,200);
         setContentPane(SearchContainer);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
