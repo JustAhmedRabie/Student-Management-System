@@ -90,6 +90,7 @@ public class StudentData extends JFrame {
 
                     if (s != null) {
                         new UpdateStudent(s);
+                        model.setRowCount(0);
                         for (Record rec : x.returnAllStudents()) {
                             String[] data = rec.lineRepresentation().split(",");
                             model.addRow(data);

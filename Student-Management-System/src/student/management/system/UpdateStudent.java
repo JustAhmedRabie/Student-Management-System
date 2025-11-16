@@ -38,6 +38,7 @@ public class UpdateStudent extends JFrame {
         String[] departments = {
                 "Not Selected",
                 "Computer Engineering",
+                "Communication Engineering",
                 "Electrical Engineering",
                 "Mechanical Engineering",
                 "Civil Engineering",
